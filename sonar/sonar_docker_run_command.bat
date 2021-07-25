@@ -1,0 +1,1 @@
+docker run -d --name sonarqube -p 9000:9000 -m 2gb -e SONAR_JDBC_URL=jdbc:postgresql://db:5454/sonar -e SONAR_JDBC_USERNAME=sonar -e SONAR_JDBC_PASSWORD=sonar -v sonarqube_data:/opt/sonarqube/data -v sonarqube_extensions:/opt/sonarqube/extensions -v sonarqube_logs:/opt/sonarqube/logs sonarqube:7.9.5-community -Dsonar.es.bootstrap.checks.disable=true

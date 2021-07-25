@@ -1,0 +1,1 @@
+docker run --name sonar-database -v /var/lib/postgresql/data:/var/lib/postgresql/data -e POSTGRES_USER=sonar -e POSTGRES_PASSWORD=sonar -d -p 5454:5432  postgres
