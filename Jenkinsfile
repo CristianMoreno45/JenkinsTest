@@ -15,6 +15,7 @@ pipeline {
         }
         stage('Docker') {
             steps {
+				sh 'ls'
 				sh 'docker build -t testapp:2021.07.24.01-dev .'
 				sh 'docker tag testapp:2021.07.24.01-dev cmoreno45/jenkins:2021.07.24.01-dev'
                 echo 'Login docker...'
