@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-				sh 'mvn --file testapp/pom.xml sonar:sonar -Dsonar.projectKey=JavaTest -Dsonar.host.url=http://18.119.131.174:9000 -Dsonar.login=c5c4baca044910f53f6467e8a2b94c603b1cc5dc'
+				sh 'mvn --file testapp/pom.xml sonar:sonar -Dsonar.projectKey=JavaTest -Dsonar.host.url=http://localhost:9000 -Dsonar.login=c5c4baca044910f53f6467e8a2b94c603b1cc5dc'
 				echo 'Done!'
             }
         }
