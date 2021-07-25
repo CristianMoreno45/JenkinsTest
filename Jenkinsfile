@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+				sh 'cd testapp'
 				sh 'mvn clean compile install'
             }
         }
@@ -16,7 +17,8 @@ pipeline {
         stage('Docker') {
             steps {
                 echo 'Login docker...'
-				sh 'sudo docker login -u cmoreno45 -p Cmoreno12+'
+				sh 'ls'
+				sh 'sudo docker login -u cmoreno45 -p fe55240c-ec5d-424e-9317-a48d91d7393c'
             }
         }
         stage('Deploy') {
